@@ -5,52 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Metropolitan</title>
   <style>
+    :root {
+      --black: #0f0f0f;
+      --gray: #666;
+      --rule: #e0e0e0;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      background: #fff;
+      color: var(--black);
+      line-height: 1.6;
     }
     nav {
-      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 80px;
     }
-    nav a {
-      margin-right: 20px;
+    .wordmark {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--gray);
       text-decoration: none;
-      color: black;
-      font-weight: bold;
+      margin-left: 24px;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .nav-links a:hover { color: var(--black); }
+    .label {
+      font-family: 'Courier New', monospace;
+      font-size: 0.72rem;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: clamp(2rem, 5vw, 2.9rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 28px;
+    }
+    p {
+      font-size: 1.05rem;
+      color: #333;
+      margin: 0 0 14px;
+      max-width: 520px;
+    }
+    .cta {
+      margin-top: 44px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
     .button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 18px;
-      background: black;
-      color: white;
+      padding: 11px 22px;
+      background: var(--black);
+      color: #fff;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .button:hover { background: #2a2a2a; }
+    .sub-link {
+      font-size: 0.875rem;
+      color: var(--gray);
+      text-decoration: none;
+    }
+    .sub-link:hover { color: var(--black); }
+    footer {
+      margin-top: 100px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      font-family: 'Courier New', monospace;
+      font-size: 0.75rem;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="/contact">Contact</a>
-    <a href="/payment">Payment</a>
+    <span class="wordmark">Metropolitan</span>
+    <div class="nav-links">
+      <a href="/contact.html">Contact</a>
+      <a href="/stripe.html">Payment</a>
+    </div>
   </nav>
-  <h1>Websites for Toledo businesses</h1>
+
+  <p class="label">Toledo, Ohio</p>
+  <h1>We build websites for local businesses.</h1>
   <p>
-    Metropolitan builds clean, fast, modern websites for local businesses that need a stronger presence online.
+    Fast, clean, and built properly — not assembled from a template.
+    We handle the whole thing: copy, design, code, and deployment.
   </p>
   <p>
-    Clear messaging. Better design. Less headache.
+    No bloat. No hand-holding required. Just a site that works.
   </p>
-  <a class="button" href="mailto:hello@metropolitanwebsitecompany.com">Contact</a>
+
+  <div class="cta">
+    <a class="button" href="mailto:hello@metropolitanwebsitecompany.com">Get in touch</a>
+    <a class="sub-link" href="/stripe.html">Make a payment →</a>
+  </div>
+
+  <footer>metropolitanwebsitecompany.com</footer>
 </body>
 </html>
