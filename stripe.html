@@ -3,54 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Payment — Metropolitan</title>
+  <title>Stripe — Metropolitan</title>
   <style>
+    :root {
+      --black: #0f0f0f;
+      --gray: #666;
+      --rule: #e0e0e0;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      background: #fff;
+      color: var(--black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
     nav {
-      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 80px;
     }
-    nav a {
-      margin-right: 20px;
+    .wordmark {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       text-decoration: none;
-      color: black;
-      font-weight: bold;
+      color: var(--black);
     }
-    nav a:hover {
-      text-decoration: underline;
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--gray);
+      text-decoration: none;
+      margin-left: 24px;
+    }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a[aria-current] { color: var(--black); }
+    .label {
+      font-family: 'Courier New', monospace;
+      font-size: 0.72rem;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
     }
-    .payment-wrapper {
-      margin-top: 40px;
+    p {
+      font-size: 1.05rem;
+      color: #333;
+      margin: 0 0 14px;
+      max-width: 520px;
+    }
+    .cta {
+      margin-top: 44px;
     }
     .button {
       display: inline-block;
-      padding: 12px 18px;
-      background: black;
-      color: white;
+      padding: 11px 22px;
+      background: var(--black);
+      color: #fff;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .button:hover { background: #2a2a2a; }
+    footer {
+      margin-top: 100px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      font-family: 'Courier New', monospace;
+      font-size: 0.75rem;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="/contact.html">Contact</a>
-    <a href="/stripe.html">Payment</a>
+    <a class="wordmark" href="/">Metropolitan</a>
+    <div class="nav-links">
+      <a href="/contact.html">Contact</a>
+      <a href="/stripe.html" aria-current="page">Stripe</a>
+    </div>
   </nav>
-  <h1>Payment</h1>
+
+  <p class="label">Toledo, Ohio</p>
+  <h1>Make a payment.</h1>
   <p>Use the button below to submit a payment securely via Stripe.</p>
 
-  <div class="payment-wrapper">
-    <a class="button" href="https://buy.stripe.com/cNi00i4ergZi1Nr5L68Ra00" target="_blank" rel="noopener">Pay Now</a>
+  <div class="cta">
+    <a class="button" href="https://buy.stripe.com/cNi00i4ergZi1Nr5L68Ra00" target="_blank" rel="noopener">Pay now</a>
   </div>
+
+  <footer>metropolitanwebsitecompany.com</footer>
 </body>
 </html>
